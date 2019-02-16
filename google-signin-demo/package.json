@@ -1,0 +1,12 @@
+{
+  "name": "google-signin-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "scripts": {
+    "dev": "lite-server -c ls-config.json"
+  }
+}
