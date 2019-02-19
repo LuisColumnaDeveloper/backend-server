@@ -81,7 +81,7 @@ app.post('/google', async(req, res) => {
 
                 return res.status(200).json({
                     ok: true,
-                    Usuario: usuarioDB,
+                    usuario: usuarioDB,
                     token: token,
                     id: usuarioDB._id
                 })
@@ -101,7 +101,7 @@ app.post('/google', async(req, res) => {
 
                 return res.status(200).json({
                     ok: true,
-                    Usuario: usuarioDB,
+                    usuario: usuarioDB,
                     token: token,
                     id: usuarioDB._id
                 })
