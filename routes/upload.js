@@ -35,7 +35,7 @@ app.put('/:tipo/:id', (req, res, next) => {
 
     }
 
-    if (!req.files.imagen) {
+    if (!req.files) {
 
         return res.status(400).json({
             ok: false,
