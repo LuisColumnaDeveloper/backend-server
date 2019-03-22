@@ -56,7 +56,7 @@ app.get('/', (req, res, next) => {
 // Actualizar un nuevo usuario
 // ================================
 
-app.put('/:id', mdAutenticacion.verificaToken, (req, res) => {
+app.put('/:id', [mdAutenticacion.verificaToken, mdAutenticacion.verificaADMIN_O_MISMOUSUARIO], (req, res) => {
 
     var id = req.params.id;
     var body = req.body;
@@ -146,7 +146,7 @@ app.post('/', (req, res) => {
 // Eliminar un usuario por el ID
 // ================================
 
-app.delete('/:id', mdAutenticacion.verificaToken, (req, res) => {
+app.delete('/:id', [mdAutenticacion.verificaToken, mdAutenticacion.verificaADMIN_ROLE], (req, res) => {
     var id = req.params.id;
 
     Usuario.findByIdAndRemove(id, (err, usuarioBorrado) => {
